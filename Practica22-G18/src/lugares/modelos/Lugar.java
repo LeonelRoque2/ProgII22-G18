@@ -9,5 +9,23 @@ package lugares.modelos;
  * @author estudiante
  */
 public class Lugar {
-    String nombre;
+    private String nombre;
+
+    public Lugar(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Lugar: " + nombre;
+    }
+    
 }

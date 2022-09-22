@@ -9,6 +9,23 @@ package idiomas.modelos;
  * @author estudiante
  */
 public class Idioma {
-    String nombre;
+    private String nombre;
+
+    public Idioma(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Idioma: " + nombre ;
+    }
     
 }

@@ -9,6 +9,23 @@ package palabrasclaves.modelos;
  * @author estudiante
  */
 public class PalabraClave {
-    String nombre;
+    private String nombre;
+
+    public PalabraClave(String nombre) {
+        this.nombre = nombre;
+    }
+     
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+     @Override
+    public String toString() {
+        return "PalabraClave: " + nombre;
+    }
     
 }

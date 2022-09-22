@@ -9,5 +9,24 @@ package tipos.modelos;
  * @author estudiante
  */
 public class Tipo {
-    String nombre;
+    private String nombre;
+
+    public Tipo(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String verNombre() {
+        return nombre;
+    }
+
+    public void asignarNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Tipo: " + nombre;
+    }
+    
+    
 }
