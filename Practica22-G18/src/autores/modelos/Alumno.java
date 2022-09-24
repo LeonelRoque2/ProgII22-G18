@@ -63,8 +63,8 @@ public class Alumno {
         this.cx = cx;
     }
     
-     void mostrar(){
-        
+    public void mostrar(){
+        System.out.println("Alumno: " +this.apellidos+ ", " +this.nombres+ "\ndni: " +this.dni);
     }
      
 }

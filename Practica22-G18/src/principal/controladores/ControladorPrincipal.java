@@ -143,11 +143,11 @@ public class ControladorPrincipal {
         arrayGrupo.add(grupo5);
         
         for(Alumno a: arrayAlumno)
-            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
-        
+//            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
+        a.mostrar();
         for(Profesor a: arrayProfesor)
-            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
-        
+//            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
+        a.mostrar();
         for(Idioma a: arrayIdioma)
             System.out.println(a);
         
@@ -161,8 +161,8 @@ public class ControladorPrincipal {
             System.out.println(a);
         
         for(Grupo a: arrayGrupo)
-            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
-        
+//            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
+        a.mostrar();
         
         alumno1.asignarApellidos("Rocha");
         alumno1.asignarDni(3000);
@@ -199,11 +199,11 @@ public class ControladorPrincipal {
         grupo5.asignarDescripcion("Nuevo grupo");
         
         for(Alumno a: arrayAlumno)
-            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
-        
+//            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
+        a.mostrar();
         for(Profesor a: arrayProfesor)
-            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
-        
+//            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
+        a.mostrar();
         for(Idioma a: arrayIdioma)
             System.out.println(a);
         
@@ -217,8 +217,8 @@ public class ControladorPrincipal {
             System.out.println(a);
         
         for(Grupo a: arrayGrupo)
-            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
-           
+//            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
+           a.mostrar();
     }
     
 }

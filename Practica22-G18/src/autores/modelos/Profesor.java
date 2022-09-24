@@ -64,7 +64,8 @@ public class Profesor {
     }
     
     public void mostrar(){
-        
+        System.out.println("Profesor: " +this.apellidos+ ", " +this.nombres);
+        System.out.println("dni: " +this.dni+ " cargo: " +this.cargo);
     }
     
 }
