@@ -85,7 +85,11 @@ public class VentanaAPalabraClave extends JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGuardarClic(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarClic
-        
+        String nombre = this.txtNombre.getText().trim();
+        PalabraClave palabras = new PalabraClave(nombre);
+        this.palabrasClaves.add(palabras);
+        for(PalabraClave i : this.palabrasClaves)
+            System.out.println(i);
     }//GEN-LAST:event_btnGuardarClic
 
 
