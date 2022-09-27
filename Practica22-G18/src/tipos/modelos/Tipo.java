@@ -25,7 +25,7 @@ public class Tipo {
 
     @Override
     public String toString() {
-        return "Tipo: " + nombre;
+        return this.nombre;
     }
     
     

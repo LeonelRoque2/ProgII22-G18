@@ -5,12 +5,15 @@
 package principal.controladores;
 
 import autores.modelos.Alumno;
+import autores.modelos.Cargo;
 import autores.modelos.Profesor;
 import grupos.modelos.Grupo;
 import idiomas.modelos.Idioma;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import lugares.modelos.Lugar;
 import palabrasclaves.modelos.PalabraClave;
+import publicaciones.modelos.Publicacion;
 import tipos.modelos.Tipo;
 
 /**
@@ -26,201 +29,147 @@ public class ControladorPrincipal {
         ArrayList <PalabraClave> arrayPalabraClave= new ArrayList<>();
         ArrayList <Tipo> arrayTipo= new ArrayList<>();
         ArrayList <Grupo> arrayGrupo= new ArrayList<>();
+        ArrayList <Publicacion> publicaciones = new ArrayList<>();
         
         
        
-//        Alumno alumno1=new Alumno(10,"Perez","Juan","1234","100");
-//        Alumno alumno2=new Alumno(11,"Martinez","Pedro","4321","101");
-//        Alumno alumno3=new Alumno(12,"Alvarez","Luciana","5678","102");
-//        Alumno alumno4=new Alumno(13,"Paz","Maria","8765","103");
-//        Alumno alumno5=new Alumno(14,"Romano","Nahuel","9999","104");
-//        
-//        arrayAlumno.add(alumno1);
-//        arrayAlumno.add(alumno2);
-//        arrayAlumno.add(alumno3);
-//        arrayAlumno.add(alumno4);
-//        arrayAlumno.add(alumno5);
+        Alumno alumno1=new Alumno(1,"Apellido1","Nombre1","Clave1","1");
+        Alumno alumno2=new Alumno(2,"Apellido2","Nombre2","Clave2","2");
+        Alumno alumno3=new Alumno(3,"Apellido3","Nombre3","Clave3","3");
+        Alumno alumno4=new Alumno(4,"Apellido4","Nombre4","Clave4","4");
+        Alumno alumno5=new Alumno(5,"Apellido5","Nombre5","Clave5","5");
         
-////        Profesor profe1 =new Profesor(1, "Nieva","Lucas","abcd","Titular");
-////        Profesor profe2 =new Profesor(2, "Moran", "Sofia", "rojo", "JTP");
-////        Profesor profe3 =new Profesor(3, "Casas", "Martín", "verde","Titular");
-////        Profesor profe4 =new Profesor(4, "Salazar", "Jesús", "otoño", "ADG");
-////        Profesor profe5 =new Profesor(5, "Estevanez", "Luis", "abril", "Asociado");
-////        
-////        arrayProfesor.add(profe1);
-////        arrayProfesor.add(profe2);
-////        arrayProfesor.add(profe3);
-////        arrayProfesor.add(profe4);
-////        arrayProfesor.add(profe5);
-////        
-////        Idioma idioma1= new Idioma("Inglés");
-////        Idioma idioma2= new Idioma("Francés");
-////        Idioma idioma3= new Idioma("Alemán");
-////        Idioma idioma4= new Idioma("Español");
-////        Idioma idioma5= new Idioma("Chino");
-////       
-//////        System.out.println(idioma1.toString());
-//////        System.out.println(idioma2.toString());
-//////        System.out.println(idioma3.toString());
-//////        System.out.println(idioma4.toString());
-//////        System.out.println(idioma5.toString());
-////        
-////        arrayIdioma.add(idioma1);
-////        arrayIdioma.add(idioma2);
-////        arrayIdioma.add(idioma3);
-////        arrayIdioma.add(idioma4);
-////        arrayIdioma.add(idioma5);
-////         
-////        Lugar lugar1= new Lugar("facultad");
-////        Lugar lugar2= new Lugar("congreso");
-////        Lugar lugar3= new Lugar("revista cientifica");
-////        Lugar lugar4= new Lugar("libro");
-////        Lugar lugar5= new Lugar("laboratorio");
-////        
-//////        System.out.println(lugar1.toString());
-//////        System.out.println(lugar2.toString());
-//////        System.out.println(lugar3.toString());
-//////        System.out.println(lugar4.toString());
-//////        System.out.println(lugar5.toString());
-////        
-////        arrayLugar.add(lugar1);
-////        arrayLugar.add(lugar2);
-////        arrayLugar.add(lugar3);
-////        arrayLugar.add(lugar4);
-////        arrayLugar.add(lugar5);
-////        
-////        PalabraClave clave1=new PalabraClave("123456");
-////        PalabraClave clave2=new PalabraClave("abcde");
-////        PalabraClave clave3=new PalabraClave("fghij");
-////        PalabraClave clave4=new PalabraClave("klmnñ");
-////        PalabraClave clave5=new PalabraClave("opqrs");
-////        
-//////        System.out.println(clave1.toString());
-//////        System.out.println(clave2.toString());
-//////        System.out.println(clave3.toString());
-//////        System.out.println(clave4.toString());
-//////        System.out.println(clave5.toString());
-////        
-////        arrayPalabraClave.add(clave1);
-////        arrayPalabraClave.add(clave2);
-////        arrayPalabraClave.add(clave3);
-////        arrayPalabraClave.add(clave4);
-////        arrayPalabraClave.add(clave5);
-////               
-////        Tipo tipo1=new Tipo("trabajo en congreso");
-////        Tipo tipo2=new Tipo("capítulo de libro");
-////        Tipo tipo3=new Tipo("libro");
-////        Tipo tipo4=new Tipo("tesis");
-////        Tipo tipo5=new Tipo("etc");
-////        
-//////        System.out.println(tipo1.toString());
-//////        System.out.println(tipo2.toString());
-//////        System.out.println(tipo3.toString());
-//////        System.out.println(tipo4.toString());
-//////        System.out.println(tipo5.toString());
-////        
-////        arrayTipo.add(tipo1);
-////        arrayTipo.add(tipo2);
-////        arrayTipo.add(tipo3);
-////        arrayTipo.add(tipo4);
-////        arrayTipo.add(tipo5);
-////        
-////        Grupo grupo1=new Grupo("G1","2 integrantes");
-////        Grupo grupo2=new Grupo("G2","4 integrantes");
-////        Grupo grupo3=new Grupo("G3","3 integrantes");
-////        Grupo grupo4=new Grupo("G4","5 integrantes");
-////        Grupo grupo5=new Grupo("G5", "4 integrantes");
-////        
-//////        grupo1.mostrar();
-//////        grupo2.mostrar();
-//////        grupo3.mostrar();
-//////        grupo4.mostrar();
-//////        grupo5.mostrar();
-////        
-////        arrayGrupo.add(grupo1);
-////        arrayGrupo.add(grupo2);
-////        arrayGrupo.add(grupo3);
-////        arrayGrupo.add(grupo4);
-////        arrayGrupo.add(grupo5);
-////        
-////        for(Alumno a: arrayAlumno)
-//////            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
-////        a.mostrar();
-////        for(Profesor a: arrayProfesor)
-//////            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
-////        a.mostrar();
-////        for(Idioma a: arrayIdioma)
-////            System.out.println(a);
-////        
-////        for(Lugar a: arrayLugar)
-////            System.out.println(a);
-////        
-////        for(PalabraClave a: arrayPalabraClave)
-////            System.out.println(a);
-////        
-////        for(Tipo a: arrayTipo)
-////            System.out.println(a);
-////        
-////        for(Grupo a: arrayGrupo)
-//////            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
-////        a.mostrar();
-////        
-////        alumno1.asignarApellidos("Rocha");
-////        alumno1.asignarDni(3000);
-////        alumno1.asignarCx("10880");
-////        alumno2.asignarNombres("Julieta Marisol");
-////        alumno2.asignarClave("2002020");
-////        alumno5.asignarApellidos("Carranza Martinez");
-////        alumno5.asignarDni(88929);
-////        
-////        profe1.asignarApellidos("Ruiz Abalos");
-////        profe1.asignarCargo("JTP");
-////        profe1.asignarNombres("Martín Andrés Luis");
-////        profe4.asignarDni(222222);
-////        profe4.asignarNombres("Mariana Josefina");
-////        profe5.asignarCargo("Titular");
-////        profe5.asignarClave("eeeeeee");
-////        
-////        idioma1.asignarNombre("Hebreo");
-////        idioma3.asignarNombre("Catalán");
-////        
-////        lugar1.asignarNombre("revista cientifica");
-////        lugar4.asignarNombre("facultad");
-////        
-////        clave3.asignarNombre("939heue");
-////        clave5.asignarNombre("repositorio");
-////        
-////        tipo2.asignarNombre("tesis");
-////        tipo5.asignarNombre("trabajo en congreso");
-////        
-////        grupo1.asignarNombre("GRUPO uno");
-////        grupo1.asignarDescripcion("1 solo integrante");
-////        grupo4.asignarDescripcion("8 integrantes");
-////        grupo5.asignarNombre("GRUPO CINCO");
-////        grupo5.asignarDescripcion("Nuevo grupo");
-////        
-////        for(Alumno a: arrayAlumno)
-//////            System.out.println("Alumno: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: "+a.verDni()+ " cx: " +a.verCx());
-////        a.mostrar();
-////        for(Profesor a: arrayProfesor)
-//////            System.out.println("Profesor: " +a.verApellidos()+ ", " +a.verNombres()+ " dni: " +a.verDni()+ " cargo: " +a.verCargo());
-////        a.mostrar();
-////        for(Idioma a: arrayIdioma)
-////            System.out.println(a);
-////        
-////        for(Lugar a: arrayLugar)
-////            System.out.println(a);
-////        
-////        for(PalabraClave a: arrayPalabraClave)
-////            System.out.println(a);
-////        
-////        for(Tipo a: arrayTipo)
-////            System.out.println(a);
-////        
-////        for(Grupo a: arrayGrupo)
-//////            System.out.println("Grupo: " +a.verNombre()+ " Descripción: " +a.verDescripcion());
-////           a.mostrar();
+        arrayAlumno.add(alumno1);
+        arrayAlumno.add(alumno2);
+        arrayAlumno.add(alumno3);
+        arrayAlumno.add(alumno4);
+        arrayAlumno.add(alumno5);
+        
+         for(Alumno a: arrayAlumno)
+        a.mostrar();
+        
+        Profesor profesor1 =new Profesor(10, "Apellido10","Nombre10","Clave10",Cargo.TITULAR);
+        Profesor profesor2 =new Profesor(20, "Apellido20","Nombre20","Clave20",Cargo.ADJUNTO);
+        Profesor profesor3 =new Profesor(30, "Apellido30","Nombre30","Clave30",Cargo.ADJUNTO);
+        Profesor profesor4 =new Profesor(40, "Apellido40","Nombre40","Clave40",Cargo.JTP);
+        Profesor profesor5 =new Profesor(50, "Apellido50","Nombre50","Clave50",Cargo.ADG);
+        
+        arrayProfesor.add(profesor1);
+        arrayProfesor.add(profesor2);
+        arrayProfesor.add(profesor3);
+        arrayProfesor.add(profesor4);
+        arrayProfesor.add(profesor5);
+        
+        for(Profesor p: arrayProfesor)
+        p.mostrar();
+        
+        Idioma idioma1= new Idioma("Idioma 1");
+        Idioma idioma2= new Idioma("Idioma 2");
+        Idioma idioma3= new Idioma("Idioma 3");
+        Idioma idioma4= new Idioma("Idioma 4");
+        Idioma idioma5= new Idioma("Idioma 5");
+       
+        arrayIdioma.add(idioma1);
+        arrayIdioma.add(idioma2);
+        arrayIdioma.add(idioma3);
+        arrayIdioma.add(idioma4);
+        arrayIdioma.add(idioma5);
+        
+        for(Idioma i: arrayIdioma)
+            System.out.println(i);
+        
+        Lugar lugar1= new Lugar("Lugar 1");
+        Lugar lugar2= new Lugar("Lugar 2");
+        Lugar lugar3= new Lugar("Lugar 3");
+        Lugar lugar4= new Lugar("Lugar 4");
+        Lugar lugar5= new Lugar("Lugar 5");
+        
+        arrayLugar.add(lugar1);
+        arrayLugar.add(lugar2);
+        arrayLugar.add(lugar3);
+        arrayLugar.add(lugar4);
+        arrayLugar.add(lugar5);
+        
+        for(Lugar l: arrayLugar)
+            System.out.println(l);
+        
+        PalabraClave palabraClave1 = new PalabraClave("PalabraClave1");
+        PalabraClave palabraClave2 = new PalabraClave("PalabraClave2");
+        PalabraClave palabraClave3 = new PalabraClave("PalabraClave3");
+        PalabraClave palabraClave4 = new PalabraClave("PalabraClave4");
+        PalabraClave palabraClave5 = new PalabraClave("PalabraClave5");
+        
+        arrayPalabraClave.add(palabraClave1);
+        arrayPalabraClave.add(palabraClave2);
+        arrayPalabraClave.add(palabraClave3);
+        arrayPalabraClave.add(palabraClave4);
+        arrayPalabraClave.add(palabraClave5);
+        
+        for(PalabraClave pc: arrayPalabraClave)
+            System.out.println(pc);
+               
+        Tipo tipo1=new Tipo("Tipo 1");
+        Tipo tipo2=new Tipo("Tipo 2");
+        Tipo tipo3=new Tipo("Tipo 3");
+        Tipo tipo4=new Tipo("Tipo 4");
+        Tipo tipo5=new Tipo("Tipo 5");
+          
+        arrayTipo.add(tipo1);
+        arrayTipo.add(tipo2);
+        arrayTipo.add(tipo3);
+        arrayTipo.add(tipo4);
+        arrayTipo.add(tipo5);
+        
+        for(Tipo t: arrayTipo)
+            System.out.println(t);
+        
+        Grupo grupo1=new Grupo("G1","Grupo 1");
+        Grupo grupo2=new Grupo("G2","Grupo 2");
+        Grupo grupo3=new Grupo("G3","Grupo 3");
+        Grupo grupo4=new Grupo("G4","Grupo 4");
+        Grupo grupo5=new Grupo("G5", "Grupo 5");
+
+        arrayGrupo.add(grupo1);
+        arrayGrupo.add(grupo2);
+        arrayGrupo.add(grupo3);
+        arrayGrupo.add(grupo4);
+        arrayGrupo.add(grupo5);
+
+        for(Grupo a: arrayGrupo)
+        a.mostrar();
+        
+        
+        LocalDate fecha1;
+        fecha1 = LocalDate.of(2021, 8, 24);
+        ArrayList<PalabraClave> palabrasClaves1 = new ArrayList<>();
+        palabrasClaves1.add(palabraClave1);
+        palabrasClaves1.add(palabraClave2);
+        ArrayList<PalabraClave> palabrasClaves2 = new ArrayList<>();
+        palabrasClaves2.add(palabraClave3);
+        ArrayList<PalabraClave> palabrasClaves3 = new ArrayList<>();
+        palabrasClaves3.add(palabraClave1);
+        palabrasClaves3.add(palabraClave5);
+        
+        Publicacion publicacion1 = new Publicacion("Título 1", arrayProfesor.get(0),LocalDate.of(2020, 6, 24), tipo1, idioma1, lugar1, palabrasClaves1, "Enlace 1", "Resumen 1"); 
+        Publicacion publicacion2 = new Publicacion("Título 2", arrayProfesor.get(1),fecha1, tipo2, idioma2, lugar2, palabrasClaves2, "Enlace 2", "Resumen 2");
+        Publicacion publicacion3 = new Publicacion("Título 3", arrayProfesor.get(1), LocalDate.of(2020, 6, 24), tipo1, idioma2, lugar2, palabrasClaves3, "Enlace 3", "Resumen 3");
+        Publicacion publicacion4 = new Publicacion("Título 4",arrayProfesor.get(3),  LocalDate.of(2020, 6, 24), tipo4, idioma2, lugar5,palabrasClaves3, "Enlace 4", "Resumen 4");
+        Publicacion publicacion5 = new Publicacion("Título 5", arrayProfesor.get(0), LocalDate.of(2020, 6, 24), tipo5, idioma3, lugar5, palabrasClaves1, "Enlace 5", "Resumen 5");
+        
+        publicaciones.add(publicacion1);
+        publicaciones.add(publicacion2);
+        publicaciones.add(publicacion3);
+        publicaciones.add(publicacion4);
+        publicaciones.add(publicacion5);
+        
+        System.out.println("\n----Publicaciones----\n");
+        for(Publicacion p : publicaciones) {
+            p.mostrar();
+            System.out.println();
+        }
+        
+        
+          
     }
-    
     
 }
