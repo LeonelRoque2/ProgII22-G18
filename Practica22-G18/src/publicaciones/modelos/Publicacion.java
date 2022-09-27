@@ -120,9 +120,8 @@ public class Publicacion {
         System.out.println("Lugar: " +this.lugar);
         System.out.println("Palabras claves");
         System.out.println("---------------");
-        for(int i=0; i<palabrasClaves.size();i++){
-         System.out.println(this.palabrasClaves.get(i));   
-        }
+        for(PalabraClave pc : palabrasClaves)
+            System.out.println(pc);
         System.out.println("Enlace: " +this.enlace);
         System.out.println("Resumen: " +this.resumen);
     }
