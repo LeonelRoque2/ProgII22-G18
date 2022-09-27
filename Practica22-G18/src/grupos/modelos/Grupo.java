@@ -4,6 +4,8 @@
  */
 package grupos.modelos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author estudiante
@@ -11,11 +13,30 @@ package grupos.modelos;
 public class Grupo {
     private String nombre;
     private String descripcion;
+    private ArrayList<MiembroEnGrupo> miembro;
+    
 
-    public Grupo(String nombre, String descripcion) {
+//    public Grupo(String nombre, String descripcion) {
+//        this.nombre = nombre;
+//        this.descripcion = descripcion;
+//    }
+
+    public Grupo(String nombre, String descripcion, ArrayList<MiembroEnGrupo> miembro) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.miembro = miembro;
     }
+
+    public ArrayList<MiembroEnGrupo> getMiembro() {
+        return miembro;
+    }
+
+    public void setMiembro(ArrayList<MiembroEnGrupo> miembro) {
+        this.miembro = miembro;
+    }
+    
+
+    
 
     public String verNombre() {
         return nombre;

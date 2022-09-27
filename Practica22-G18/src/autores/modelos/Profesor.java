@@ -4,6 +4,9 @@
  */
 package autores.modelos;
 
+import grupos.modelos.MiembroEnGrupo;
+import java.util.ArrayList;
+
 /**
  *
  * @author estudiante
@@ -14,14 +17,28 @@ public class Profesor {
     private String nombres;
     private String clave;
     private Cargo cargo;
+    private ArrayList<MiembroEnGrupo> miembroEnGrupo;
 
-    public Profesor(int dni, String apellidos, String nombres, String clave, Cargo cargo) {
+    public Profesor(int dni, String apellidos, String nombres, String clave, Cargo cargo, ArrayList<MiembroEnGrupo> miembroEnGrupo) {
         this.dni = dni;
         this.apellidos = apellidos;
         this.nombres = nombres;
         this.clave = clave;
         this.cargo = cargo;
+        this.miembroEnGrupo = miembroEnGrupo;
     }
+
+    public ArrayList<MiembroEnGrupo> getMiembroEnGrupo() {
+        return miembroEnGrupo;
+    }
+
+    public void setMiembroEnGrupo(ArrayList<MiembroEnGrupo> miembroEnGrupo) {
+        this.miembroEnGrupo = miembroEnGrupo;
+    }
+
+    
+
+    
 
     public int verDni() {
         return dni;
